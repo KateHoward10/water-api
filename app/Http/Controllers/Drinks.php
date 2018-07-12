@@ -24,7 +24,7 @@ class Drinks extends Controller
      */
     public function store(DrinkRequest $request)
     {
-        $data = $request->only(["time", "amount"]);
+        $data = $request->only(["amount"]);
         $drink = Drink::create($data);
         return response($drink, 201);
     }
@@ -49,7 +49,7 @@ class Drinks extends Controller
      */
     public function update(DrinkRequest $request, Drink $drink)
     {
-        $data = $request->only(["time", "amount"]);
+        $data = $request->only(["amount"]);
         $drink->fill($data)->save();
         return $drink;
     }

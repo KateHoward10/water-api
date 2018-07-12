@@ -15,7 +15,6 @@ class CreateDrinksTable extends Migration
     {
         Schema::create('drinks', function (Blueprint $table) {
             $table->increments('id');
-            $table->dateTime('time');
             $table->integer('amount');
             $table->timestamps();
         });
