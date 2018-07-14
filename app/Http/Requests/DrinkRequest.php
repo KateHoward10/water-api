@@ -24,8 +24,7 @@ class DrinkRequest extends FormRequest
     public function rules()
     {
         return [
-            // "time" => ["required", "dateTime"],
-            "amount" => ["required", "integer"],
+            "amount" => ["required", "integer", "min:0"],
         ];
     }
 }
